@@ -1,0 +1,37 @@
+
+body {
+    background-color: rgb(253, 244, 231);
+    font-family: 'Noto Sans', system-ui;
+}
+
+p {
+    font-size: large;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    background-color: rgb(226, 214, 197);
+    width: 90%;
+    gap: 16px;
+    padding: 10px;
+    
+}
+
+.card {
+        transform-style: preserve-3d; 
+        display: block;
+        perspective: 700px;
+}
+
+.card img {
+    transition: transform 0.1s ease-out;
+    overflow: visible;
+    
+}
+
+.center {
+    text-align: center;
+}
+
