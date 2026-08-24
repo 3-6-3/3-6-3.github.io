@@ -1,5 +1,4 @@
-#Welcome to my Blog
-fuck off
+#my web blog thing
 
 
 
