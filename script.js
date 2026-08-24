@@ -12,7 +12,7 @@ function createCard(Image, Url) {
     newCardImage.addEventListener('load', () => {
         const Boundaries = Anchor.getBoundingClientRect()
         Anchor.addEventListener('mousemove', (e) => {
-        var relativeX = ((e.clientX - Boundaries.left) / Boundaries.width - 0.5) * -20
+        var relativeX = ((e.clientX - Boundaries.left) / Boundaries.width - 0.5) * 20
         var relativeY = ((e.clientY - Boundaries.top) / Boundaries.height - 0.5) * 20
         newCardImage.style.transform = `rotateX(${relativeY}deg) rotateY(${relativeX}deg)`
     })
