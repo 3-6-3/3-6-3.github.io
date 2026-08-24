@@ -7,12 +7,10 @@ function createCard(Image, Url) {
     Anchor.className = "card"
     document.getElementById("HubDiv").appendChild(Anchor)
     //Logic
-    
-    //Fixed Github Pages asset download delay causing bad calulations
-    newCardImage.addEventListener('load', () => {
+    Anchor.addEventListener('mousemove', (e) => {
+        //Get bounds
         const Boundaries = Anchor.getBoundingClientRect()
-        Anchor.addEventListener('mousemove', (e) => {
-        var relativeX = ((e.clientX - Boundaries.left) / Boundaries.width - 0.5) * 20
+        var relativeX = ((e.clientX - Boundaries.left) / Boundaries.width - 0.5) * -20
         var relativeY = ((e.clientY - Boundaries.top) / Boundaries.height - 0.5) * 20
         newCardImage.style.transform = `rotateX(${relativeY}deg) rotateY(${relativeX}deg)`
     })
@@ -20,9 +18,6 @@ function createCard(Image, Url) {
     Anchor.addEventListener('mouseleave', (e) => {
         newCardImage.style.removeProperty('transform')
     })
-    })
-    
-
 }
 
 createCard("Typescript-logo.png", "Tycoon");
