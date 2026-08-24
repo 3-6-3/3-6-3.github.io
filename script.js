@@ -6,7 +6,7 @@ function createCard(Image, Url) {
     Anchor.appendChild(newCardImage)
     Anchor.className = "card"
     document.getElementById("HubDiv").appendChild(Anchor)
-    const Boundaries = Anchor.getBoundingClientRect()
+    let Boundaries = Anchor.getBoundingClientRect()
     //Fixed Github Pages asset download delay causing bad calulations
     newCardImage.addEventListener('load', () => {
     Boundaries = Anchor.getBoundingClientRect()
