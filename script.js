@@ -7,10 +7,10 @@ function createCard(Image, Url) {
     Anchor.className = "card"
     document.getElementById("HubDiv").appendChild(Anchor)
     //Logic
-    var Boundaries = Anchor.getBoundingClientRect()
+    
     //Fixed Github Pages asset download delay causing bad calulations
     newCardImage.addEventListener('load', () => {
-    Boundaries = Anchor.getBoundingClientRect()
+        const Boundaries = Anchor.getBoundingClientRect()
         Anchor.addEventListener('mousemove', (e) => {
         var relativeX = ((e.clientX - Boundaries.left) / Boundaries.width - 0.5) * -20
         var relativeY = ((e.clientY - Boundaries.top) / Boundaries.height - 0.5) * 20
