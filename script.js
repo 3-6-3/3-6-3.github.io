@@ -10,8 +10,6 @@ function createCard(Image, Url) {
     //Fixed Github Pages asset download delay causing bad calulations
     newCardImage.addEventListener('load', () => {
     Boundaries = Anchor.getBoundingClientRect()
-    console.log(Boundaries);
-    
     })
     //Logic
     Anchor.addEventListener('mousemove', (e) => {
@@ -25,4 +23,4 @@ function createCard(Image, Url) {
     })
 }
 
-createCard("Typescript-logo.png", "Typescript.html");
+createCard("Typescript-logo.png", "Tycoon");
