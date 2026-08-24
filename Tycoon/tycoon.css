@@ -1,6 +1,6 @@
 
 body {
-    background-color: rgb(253, 244, 231);
+    background-color: rgb(39, 38, 36);
     font-family: 'Noto Sans', system-ui;
 }
 
@@ -8,3 +8,13 @@ body {
     text-align: center;
 }
 
+.button {
+    background-image: linear-gradient(to bottom, rgb(244, 245, 243), rgb(84, 85, 83));
+    padding: 10px 20px;
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-family: 'Noto Sans', system-ui;
+}
