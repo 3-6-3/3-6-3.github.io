@@ -6,10 +6,15 @@ function createCard(Image, Url) {
     Anchor.appendChild(newCardImage)
     Anchor.className = "card"
     document.getElementById("HubDiv").appendChild(Anchor)
-    const Boundaries = Anchor.getBoundingClientRect()
+
+    //Fixed Github Pages asset download delay causing bad calulations
+    newCardImage.addEventListener('load', () => {
+    Boundaries = Anchor.getBoundingClientRect()
+    console.log(Boundaries);
+    
+    })
     //Logic
     Anchor.addEventListener('mousemove', (e) => {
-        
         var relativeX = ((e.clientX - Boundaries.left) / Boundaries.width - 0.5) * -20
         var relativeY = ((e.clientY - Boundaries.top) / Boundaries.height - 0.5) * 20
         newCardImage.style.transform = `rotateX(${relativeY}deg) rotateY(${relativeX}deg)`
